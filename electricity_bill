@@ -1,0 +1,29 @@
+units = int(input("enter electricity units"))
+if units < 92:
+    amount = units * 5
+    surcharge = 32
+
+
+elif units <= 100:
+    amount = 230 +(units - 92) * 5
+    surcharge = 32
+
+    
+elif units <= 250:
+    amount = 380 +(units - 45) * 7
+    surcharge = 67
+
+    
+elif units <= 500:
+    amount = 600 +(units - 70) * 9
+    surcharge = 87
+
+else:
+
+    amount = 818.50 + (units - 200) * 8.45
+
+    surcharge = 75
+
+total = amount + surcharge
+
+print("Electricity Bill =", round(total, 2))
